@@ -1,0 +1,7 @@
+Section-I:
+In the program Section-I.py,I have used the truseq.bed file to form a dictionary of the panel regions given for each chromosome positions.This was then accessed to match with the lines not having '#' that is the chromosome positions in order to check whether they are the accepted mutations or not.The accepted mutations extracted has been saved in a accepted.txt file (tab separated) and then saved into xlsx format.The number of accepted mutations found is 3409 out of 4774 mutations.
+
+Section-II:
+I have established connection between mysql and python.I have used 'cursor.execute' to execute the mysql queries in the python script.Command_1 is the query for creating the table with the 9 columns as mentioned in the question.Command_2 is the query for insertion of the mutations from mutect_immediate.vcf file to the table in mysql database.After the data has been inserted in the my_vcf table,Command_3 is the query written for extraction of mutation with quality < 500 and > 50.The extracted mutation is written to a text file.
+
+NOTE: Since there were no such mutation containing quality score < 500 and > 50.I have modified the quality value one of the mutation entries to '250' in order to check my query and saved the result in quality_mutation_3c.txt. 
